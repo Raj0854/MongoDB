@@ -109,3 +109,9 @@ db.students.insertMany([
 
 
 // Output: { acknowledged: true, insertedIds: { ... } }
+// db.students.find();
+// db.students.find({name: "Peter"});
+// db.students.find({age: {$gte : 24}});
+// db.students.find({gpa : {$eq : 3.0}});
+// db.students.find({graduationYear : {$ne : 2026}});
+// db.students.find({$and : [ {major : "Biology"},{age : {$lt : 23}}]});
