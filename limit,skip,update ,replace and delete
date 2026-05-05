@@ -135,3 +135,4 @@ db.students.deleteOne( { name: "Alice" } );
 db.students.deleteMany( { status: "active" } );
 
 db.students.find();
+```
