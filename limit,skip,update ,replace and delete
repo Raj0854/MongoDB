@@ -1,6 +1,6 @@
+###update and replace
 
-
-```yml
+``` yml
 db.students.insertMany([
   {
     name: "Alice",
@@ -136,4 +136,4 @@ db.students.deleteOne( { name: "Alice" } );
 db.students.deleteMany( { status: "active" } );
 
 db.students.find();
-```
+
