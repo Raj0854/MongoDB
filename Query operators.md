@@ -89,3 +89,9 @@ db.students.insertMany(students)
 
 db.students.find()
 ```
+```js
+db.students.find({major:{$in :["Physics"]}});
+ db.students.find({gpa:{$exists:true}});
+ db.students.find({gpa:{$type:"int"}});
+db.students.find({ $nor: [ { major: "Math" }, { gpa: 4.0 }]});
+```
