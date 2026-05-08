@@ -208,16 +208,12 @@ db.students.find({}, { name: 1, scores: { $slice: 2 }, _id: 0 });
 ```
 
 ```javascript
-// $elemMatch in projection – Return only matching array elements
-db.students.find(
-  { hobbies: "gaming" },
-  { name: 1, hobbies: { $elemMatch: { $eq: "gaming" } }, _id: 0 }
-).pretty()
-// Shows only ["gaming"] in hobbies for Alice and Diana
+// $elemMatch
+db.students.find({ hobbies: "gaming" },{ name: 1, hobbies: { $elemMatch: { $eq: "gaming" } }, _id: 0 });
 ```
 
 ```javascript
-// Nested field projection
-db.students.find({}, { "address.city": 1, _id: 0 }).pretty()
-// Shows only the city inside address
+
+db.students.find({}, { "address.city": 1, _id: 0 });
+
 ```
