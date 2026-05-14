@@ -1,4 +1,4 @@
-###update and replace
+###Delete 
 
 ``` yml
 db.students.insertMany([
@@ -107,26 +107,8 @@ db.students.insertMany([
   { name: "Thomas", age: 24, major: "Chemistry", gpa: 2.9, graduationYear: 2023, address: { city: "Orlando", zip: "32801" }, status: "probation", hobbies: ["Sports"] }
 ]);
 
-// limit and skip
-db.students.find().sort({name:1}).limit(3).skip(1);
-// updateOne
-// updateOne 
-db.students.updateOne(
-    { name:"Alice" },
-    { $set : { age: 21 }, $push : { hobbies : "Swimming" }}
-    
-);
-//updateMany
-db.students.updateMany(
-  { status : "active" },
-  { $inc : { gpa :- 0.1 }}
-) ;  
 
-// replaceOne 
-db.students.replaceOne(
-    { name : "Alice" },
-    { name : "Alice" ,age: 34 , major: "Design ", gpa : 3.7 }
-);
+
 // delete-
 
 // delete 
