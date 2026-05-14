@@ -1,7 +1,5 @@
 ## insert random data
 ```js
-db.students.drop()
-
 const majors = [
   "Computer Science", "Biology", "Math", "Physics",
   "Chemistry", "Statistics", "Electronics", "Mechanical",
