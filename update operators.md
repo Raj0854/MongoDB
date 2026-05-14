@@ -1,6 +1,27 @@
 ## Date 12 May 2026
 
 ```yml
+// updateOne 
+db.students.updateOne(
+    { name:"Alice" },
+    { $set : { age: 21 }, $push : { hobbies : "Swimming" }}
+    
+);
+//updateMany
+db.students.updateMany(
+  { status : "active" },
+  { $inc : { gpa :- 0.1 }}
+) ;  
+
+// replaceOne 
+db.students.replaceOne(
+    { name : "Alice" },
+    { name : "Alice" ,age: 34 , major: "Design ", gpa : 3.7 }
+);
+
+
+
+
 
 
 
@@ -140,5 +161,6 @@ db.employees.updateOne(
 
 
 db.employees.find({_id:1});
+
 
 ```
