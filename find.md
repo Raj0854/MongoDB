@@ -117,4 +117,7 @@ db.students.insertMany([
 // db.students.find({$and : [ {major : "Biology"},{age : {$lt : 23}}]});
 // db.students.find({ status: "active", age: { $lt: 23 } });
 // find with sorting asc and desc
-db.students.find({},{name:1,_id:0,age:2}).sort({name:-1});
+  db.students.find({},{name:1,_id:0,age:2}).sort({name:-1});
+
+// limit and skip
+db.students.find().sort({name:1}).limit(3).skip(1);
