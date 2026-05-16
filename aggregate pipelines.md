@@ -1,5 +1,8 @@
-```xml
-// 4. Insert 5 rich sample documents
+
+#### Aggregate operators
+#### insert data
+```javascript
+
 db.students.insertMany([
   {
     name: "Alice",
