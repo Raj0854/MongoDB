@@ -11,31 +11,47 @@ db.books.insertMany([
 ```
 ### find
 ```js
-// db.books.find();
+ db.books.find();
 ```
 ### check existing Indexes
 ```js
-// db.books.getIndexes();
+db.books.getIndexes();
+```
+### check index status before creating
+```js
+db.books.explain("executionStats").find({ year: { $gt: 1900 } });
+```
+### create a index 
+```js
+db.books.createIndex({ year: 1 });
 ```
 
-// db.books.explain("executionStats").find({ year: { $gt: 1900 } });
+### check index status after creating
+```js 
+db.books.explain("executionStats").find({ year: { $gt: 1900 } });
+```
 
-db.books.createIndex({ year: 1 });
-
-// db.books.explain("executionStats").find({ year: { $gt: 1900 } });
-
-// create compound Indexes
+###create compound Indexes
+```js
 db.books.createIndex({ author: 1, year: -1 });
+```
 
-// create unique Indexes
+### create unique Indexes
+```js
 db.books.createIndex({ title: 1 }, { unique: true })
+```
 
-// Perform a Basic Text Search
+### Perform a Basic Text Search
+```js
 db.books.createIndex({ title: "text", description: "text" });
+```
 
-// Search for words
+###Search for words
+```js
 db.books.find({ $text: { $search: "society romantic" } });
+```
 
-
-// call the Indexes
+### call the Indexes
+```js
 db.books.find({ $text: { $search: "society romantic" } }).pretty()
+```
