@@ -31,7 +31,7 @@ db.books.createIndex({ year: 1 });
 db.books.explain("executionStats").find({ year: { $gt: 1900 } });
 ```
 
-###create compound Indexes
+### create compound Indexes
 ```js
 db.books.createIndex({ author: 1, year: -1 });
 ```
@@ -46,7 +46,7 @@ db.books.createIndex({ title: 1 }, { unique: true })
 db.books.createIndex({ title: "text", description: "text" });
 ```
 
-###Search for words
+### Search for words
 ```js
 db.books.find({ $text: { $search: "society romantic" } });
 ```
